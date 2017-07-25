@@ -76,3 +76,5 @@ if(operator === '/'){
 $("#result").text(result);
 
 });
+
+// rien de marche
