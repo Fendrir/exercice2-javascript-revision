@@ -8,27 +8,27 @@ var egalAction = $('#buttonForm');
 
 egalAction.click(function(){
 
-	var imput1 = $('#imput1');
-	var imput2 = $('#imput2');
+	var imput1 = $('#input1');
+	var imput2 = $('#input2');
 
 });
 
 
 function add (a, b){
 
-	return parseInt(a+b);
+	return parseInt(a)+parseInt(b);
 
 }
 
 function soustract (a, b){
 
-	return parseInt(a-b);
+	return parseInt(a)-parseInt(b);
 
 }
 
 function multiply (a, b){
 
-	return parseInt(a*b);
+	return parseInt(a)*parseInt(b);
 
 }
 
@@ -36,7 +36,7 @@ function divide (a, b){
 
 	if(b != 0){
 
-	return parseInt(a/b);
+	return parseInt(a)/parseInt(b);
 
 	}
 
@@ -46,35 +46,35 @@ function divide (a, b){
 
 $('#buttonForm').click(function(){
 
-	var imput1 = $('#imput1').val();
-	var imput2 = $('#imput2').val();
+	var imput1 = $('#input1').val();
+	var imput2 = $('#input2').val();
 	var operator = $('#selectOperation').val();
 	var result;
 
-
 if(operator === '+'){
 
-	add(imput1, imput2);
+	result=add(imput1, imput2);
+
 
 }
 
 if(operator === '-'){
 
-	soustract(imput1, imput2);
+	result=soustract(imput1, imput2);
 }
 
 if(operator === '*'){
 
-	multiply(imput1, imput2);
+	result=multiply(imput1, imput2);
 }
 
 if(operator === '/'){
 
-	divide(imput1, imput2);
+	result=divide(imput1, imput2);
 }
 
 $("#result").text(result);
 
 });
 
-// rien de marche
+// partie 1 fonctionne
